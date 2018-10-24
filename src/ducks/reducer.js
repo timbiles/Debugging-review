@@ -1,17 +1,17 @@
 const initialState = {
-    name = ''
+    name: '',
 };
 
 const UPDATE_INPUT = 'UPDATE_INPUT';
 
 export const updateInput = input => {
   return {
-    action: UPDATE_INPUT,
+    type: UPDATE_INPUT,
     payload: input
   };
 };
 
-export default function reducer(state, action) {
+export default function reducer(state = initialState, action) {
   switch (action.type) {
     case UPDATE_INPUT:
       return {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link, Route} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 class home extends Component {
     constructor(){
@@ -9,8 +9,8 @@ class home extends Component {
         }
     }
     render() {
-        const mapper = links.map((e)=> {        
-            return <Link to={`/${e}`}>
+        const mapper = this.state.links.map((e, i)=> {        
+            return <Link to={`/${e}`} key={i}>
                 {e}
             </Link>
         })

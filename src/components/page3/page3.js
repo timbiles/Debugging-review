@@ -13,16 +13,21 @@ class page3 extends Component {
 
     componentDidMount(){
         axios.get('https://www.breakingbadapi.com/api/characters/').then(response=> {
-            this.setState({characters: reponse.data})            
+            this.setState({characters: response.data})            
         })
     }
 
     render() {
+        const map = this.state.characters.map((e, i) => {
+            return <div key={i}>
+                <p>{e.name}</p>
+            </div>
+        })
 
         return (
             <div>
                 <h1>Page 3</h1>
-                {this.state.characters.name}
+                {map}
                 <div>
                     <Link to='/'> Home</Link>
                 </div>
