@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Route} from 'react-router-dom';
 
 class home extends Component {
     constructor(){
         super();
         this.state = {
-            links: ['Page1', 'Page2']
+            links: ['Page1', 'Page2', 'Page3']
         }
     }
     render() {
-        // const mapper = links.map((e, i)=> {        
-        const mapper = this.state.links.map((e, i)=> {
-            return <Link to={`/${e}`}key={i}>
+        const mapper = links.map((e)=> {        
+            return <Link to={`/${e}`}>
                 {e}
             </Link>
         })
         return (
             <div className="App-header">
+            <h1>React debugger, scavenger hunt!</h1>
             <img
               src="http://getdrawings.com/img/rubber-ducky-silhouette-28.png"
               className="App-logo"
