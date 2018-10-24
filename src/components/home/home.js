@@ -1,0 +1,40 @@
+import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
+
+class home extends Component {
+    constructor(){
+        super();
+        this.state = {
+            links: ['Page1', 'Page2']
+        }
+    }
+    render() {
+        // const mapper = links.map((e, i)=> {        
+        const mapper = this.state.links.map((e, i)=> {
+            return <Link to={`/${e}`}key={i}>
+                {e}
+            </Link>
+        })
+        return (
+            <div className="App-header">
+            <img
+              src="http://getdrawings.com/img/rubber-ducky-silhouette-28.png"
+              className="App-logo"
+              alt="logo"
+            />
+            <p>Why does this page have no styling??</p>
+            <a
+              className="App-link"
+              href="https://codepen.io/austinwc33/pen/eWGrpe"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Learn Rubber Duckie
+            </a>
+                {mapper}
+            </div>
+        );
+    }
+}
+
+export default home;
