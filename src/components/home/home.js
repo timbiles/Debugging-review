@@ -9,7 +9,7 @@ class home extends Component {
         }
     }
     render() {
-        const mapper = this.state.links.map((e, i)=> {        
+        const mapper = links.map((e, i)=> {        
             return <Link to={`/${e}`} key={i}>
                 {e}
             </Link>

@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 
 import { updateInput } from '../../ducks/reducer';
 
-class page2 extends Component {
+class page2 extends component {
   constructor() {
     super();
     this.state = {
@@ -13,7 +13,7 @@ class page2 extends Component {
   }
 
 submitName = () => { 
-    this.setState({names: [...this.state.names, this.props.name]})
+    this.setState({names: [...this.state.names, props.name]})
 }
 
   render() {
@@ -31,9 +31,9 @@ submitName = () => {
           name="name"
           onChange={e => this.props.updateInput(e)}
         />
-        <button onClick={() => this.submitName()}>Submit</button>
+        <button onClick={() => this.submitName()}}>Submit</button>
         {nameMap}
-        <div className='bottom_links'>
+        <div className={bottom_links}>
             <Link to="/">
             <p>Home</p>
             </Link>
